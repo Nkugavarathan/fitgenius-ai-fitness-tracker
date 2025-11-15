@@ -1,0 +1,5 @@
+# Created at 2025-11-15T18:43:43.596
+Boot Manifest-JAR contains absolute paths in classpath 'E:\java\Java2025\Springboot\fitgenius\fitgenius-backend\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+
