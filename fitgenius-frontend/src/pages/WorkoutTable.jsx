@@ -1,8 +1,12 @@
-import React, { useEffect, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import api from "../api/axiosInstance.js"
 import { useLocation } from "react-router-dom"
 import toast from "react-hot-toast"
+import { AuthContext } from "../context/AuthContext.jsx"
+
 const WorkoutTable = () => {
+  const { token } = useContext(AuthContext)
+
   const [workouts, setWorkouts] = useState([])
   const [form, setForm] = useState({ exerciseName: "", sets: "", reps: "" })
 
@@ -13,7 +17,7 @@ const WorkoutTable = () => {
 
   useEffect(() => {
     // only load workouts if current path is /workouts
-    if (location.pathname === "/workouts") {
+    if (location.pathname === "/workouts" && token) {
       loadWorkouts()
     }
   }, [location.pathname])
@@ -23,7 +27,7 @@ const WorkoutTable = () => {
 
     try {
       const res = await api.get("/workouts")
-      console.log(res)
+      // console.log(res)
       toast.dismiss(loadingToast) // remove loading toast
       toast.success("Workouts loaded ✅")
       setWorkouts(res.data)

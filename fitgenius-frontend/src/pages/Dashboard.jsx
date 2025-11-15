@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import api from "../api/axiosInstance.js"
 import ProgressChart from "../components/ProgressChart.jsx"
+import { Link } from "react-router-dom"
 
 const Dashboard = () => {
   const [user, setUser] = useState(null)
@@ -41,14 +42,16 @@ const Dashboard = () => {
         </div>
 
         {/* Card 3 */}
-        <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-md hover:shadow-xl p-6 transition transform hover:-translate-y-1 border border-blue-100 dark:border-gray-700">
-          <h3 className="text-xl font-semibold text-blue-500 mb-2">
-            AI Fitness Coach
-          </h3>
-          <p className="text-gray-600 dark:text-gray-300">
-            Get personalized AI-powered workout suggestions for your goals.
-          </p>
-        </div>
+        <Link to="/chatbot">
+          <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-md hover:shadow-xl p-6 transition transform hover:-translate-y-1 border border-blue-100 dark:border-gray-700">
+            <h3 className="text-xl font-semibold text-blue-500 mb-2">
+              AI Fitness Coach
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300">
+              Get personalized AI-powered workout suggestions for your goals.
+            </p>
+          </div>
+        </Link>
       </div>
       <div className="mt-10">
         <ProgressChart />
