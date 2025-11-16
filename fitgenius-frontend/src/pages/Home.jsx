@@ -1,6 +1,9 @@
+import { useContext } from "react"
+import { Link } from "react-router-dom"
+
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
       {/* Hero Section*/}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -133,7 +136,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="flex items-start">
+                {/* <div className="flex items-start">
                   <div className="flex-shrink-0 mt-1">
                     <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
                       <svg
@@ -152,7 +155,7 @@ export default function Home() {
                       </svg>
                     </div>
                   </div>
-                  <div className="ml-4">
+                   <div className="ml-4">
                     <h3 className="text-xl font-semibold text-gray-800">
                       Nutrition Tracking
                     </h3>
@@ -160,8 +163,8 @@ export default function Home() {
                       Monitor your diet and get meal suggestions based on your
                       fitness goals.
                     </p>
-                  </div>
-                </div>
+                  </div> 
+                </div> */}
               </div>
 
               <div className="mt-10">
@@ -332,7 +335,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600">
+      <section className="py-20 bg-blue-400">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Transform Your Fitness Journey?
@@ -357,6 +360,27 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* AI chatbot icon */}
+
+      <Link to="/chatbot">
+        {/* <button className="fixed bottom-6 right-6 z-50 w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-all duration-300 group hover:shadow-xl"> */}
+        <button
+          className="fixed bottom-6 right-6 z-50 w-16 h-16 
+  bg-gradient-to-r from-blue-500 to-blue-600 
+  rounded-full shadow-2xl flex items-center justify-center 
+  hover:scale-110 transition-all duration-300 group hover:shadow-xl animate-bounce"
+        >
+          <div className="relative">
+            <span className="text-white text-2xl">🤖</span>
+            <div className="absolute -top-1 -right-1 w-10 h-10 bg-blue-200  opacity-10 rounded-full "></div>
+          </div>
+
+          {/* Tooltip */}
+          <div className="absolute right-20 bottom-0 bg-gray-900 text-white text-sm px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-lg">
+            Chat with AI
+          </div>
+        </button>
+      </Link>
 
       {/* Custom CSS for animations */}
       <style jsx>{`
