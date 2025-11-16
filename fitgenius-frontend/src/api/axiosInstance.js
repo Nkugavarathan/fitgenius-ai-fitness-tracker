@@ -13,4 +13,7 @@ api.interceptors.request.use((config) => {
   return config
 })
 
+export const getTodayDate = () => {
+  return new Date().toISOString().split("T")[0]
+}
 export default api
