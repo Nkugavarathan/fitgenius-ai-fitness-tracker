@@ -30,7 +30,7 @@ export default function Home() {
           <div className="mt-10">
             <a
               href="/workouts"
-              className="px-8 py-4 bg-blue-600 text-white text-lg font-semibold rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl inline-block"
+              className="cursor-pointer px-8 py-4 bg-blue-600 text-white text-lg font-semibold rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl inline-block"
             >
               Start Your Journey Today
             </a>
@@ -136,7 +136,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* <div className="flex items-start">
+                <div className="flex items-start">
                   <div className="flex-shrink-0 mt-1">
                     <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
                       <svg
@@ -155,7 +155,7 @@ export default function Home() {
                       </svg>
                     </div>
                   </div>
-                   <div className="ml-4">
+                  <div className="ml-4">
                     <h3 className="text-xl font-semibold text-gray-800">
                       Nutrition Tracking
                     </h3>
@@ -163,11 +163,11 @@ export default function Home() {
                       Monitor your diet and get meal suggestions based on your
                       fitness goals.
                     </p>
-                  </div> 
-                </div> */}
+                  </div>
+                </div>
               </div>
 
-              <div className="mt-10">
+              {/* <div className="mt-10 ">
                 <a
                   href="/features"
                   className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-300 inline-flex items-center"
@@ -188,7 +188,7 @@ export default function Home() {
                     ></path>
                   </svg>
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

@@ -24,7 +24,7 @@ export default function Login() {
 
   return (
     <div className="flex  min-h-screen bg-blue-50">
-      <div className="flex-1 hidden">
+      <div className="flex-1 hidden lg:block">
         <img src="/login.png" alt="" />
       </div>
       <div className="flex-1  flex items-center justify-center p-6">
@@ -48,10 +48,10 @@ export default function Login() {
             onChange={(e) => setData({ ...data, password: e.target.value })}
           />
 
-          <button className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition-colors">
+          <button className="bg-blue-500  w-full text-white px-6 py-2 rounded hover:bg-blue-600 transition-colors">
             Login
           </button>
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-gray-600 mt-3">
             Don’t have an account?{" "}
             <Link to="/register" className="text-blue-600 hover:underline">
               Register

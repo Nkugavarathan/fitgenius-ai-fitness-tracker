@@ -15,7 +15,7 @@ export default function Register() {
   return (
     <div className="min-h-screen flex   bg-blue-50 bg-gradient-to-br from-blue-50 to-blue-100">
       {/* Image Section */}
-      <div className=" flex-1 hidden ">
+      <div className=" flex-1 hidden  lg:block ">
         <img src="/register.png" alt="" />
       </div>
 
