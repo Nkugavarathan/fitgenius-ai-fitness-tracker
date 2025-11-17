@@ -13,42 +13,50 @@ export default function Register() {
   }
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-blue-50">
-      <form
-        onSubmit={handleSubmit}
-        className="flex flex-col items-center bg-white p-8 rounded-lg shadow-lg w-80"
-      >
-        <h2 className="text-2xl font-bold text-blue-600 mb-6">
-          Create Account
-        </h2>
+    <div className="min-h-screen flex   bg-blue-50 bg-gradient-to-br from-blue-50 to-blue-100">
+      {/* Image Section */}
+      <div className=" flex-1 hidden ">
+        <img src="/register.png" alt="" />
+      </div>
 
-        <input
-          type="text"
-          required
-          placeholder="Full Name"
-          className="border border-blue-300 focus:border-blue-500 focus:ring focus:ring-blue-200 p-2 mb-4 w-full rounded"
-          onChange={(e) => setData({ ...data, fullName: e.target.value })}
-        />
+      {/* Login Form */}
+      <div className="flex-1 flex items-center justify-center p-6">
+        <form
+          onSubmit={handleSubmit}
+          className="w-full max-w-sm p-8 rounded-2xl shadow-xl"
+        >
+          <h2 className="text-2xl font-bold text-blue-600 mb-6">
+            Create Account
+          </h2>
 
-        <input
-          type="email"
-          placeholder="Email"
-          className="border border-blue-300 focus:border-blue-500 focus:ring focus:ring-blue-200 p-2 mb-4 w-full rounded"
-          onChange={(e) => setData({ ...data, email: e.target.value })}
-        />
+          <input
+            type="text"
+            required
+            placeholder="Full Name"
+            className="border border-blue-300 focus:border-blue-500 focus:ring focus:ring-blue-200 p-2 mb-4 w-full rounded"
+            onChange={(e) => setData({ ...data, fullName: e.target.value })}
+          />
 
-        <input
-          type="password"
-          required
-          placeholder="Password"
-          className="border border-blue-300 focus:border-blue-500 focus:ring focus:ring-blue-200 p-2 mb-6 w-full rounded"
-          onChange={(e) => setData({ ...data, password: e.target.value })}
-        />
+          <input
+            type="email"
+            placeholder="Email"
+            className="border border-blue-300 focus:border-blue-500 focus:ring focus:ring-blue-200 p-2 mb-4 w-full rounded"
+            onChange={(e) => setData({ ...data, email: e.target.value })}
+          />
 
-        <button className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition-colors w-full">
-          Register
-        </button>
-      </form>
+          <input
+            type="password"
+            required
+            placeholder="Password"
+            className="border border-blue-300 focus:border-blue-500 focus:ring focus:ring-blue-200 p-2 mb-6 w-full rounded"
+            onChange={(e) => setData({ ...data, password: e.target.value })}
+          />
+
+          <button className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition-colors w-full">
+            Register
+          </button>
+        </form>
+      </div>
     </div>
   )
 }

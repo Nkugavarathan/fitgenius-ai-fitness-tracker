@@ -118,6 +118,7 @@
 			<artifactId>google-genai</artifactId>
 			<version>1.0.0</version> <!-- Or the latest stable version -->
 		</dependency>
+
 <!--		pdf -->
 <!--		<dependency>-->
 <!--			<groupId>com.itextpdf</groupId>-->

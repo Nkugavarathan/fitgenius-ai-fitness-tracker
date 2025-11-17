@@ -23,37 +23,42 @@ export default function Login() {
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-blue-50">
-      <form
-        onSubmit={handleSubmit}
-        className="flex flex-col items-center justify-center bg-white p-8 rounded-lg shadow-lg"
-      >
-        <h2 className="text-3xl font-bold text-blue-600 mb-6">Login</h2>
+    <div className="flex  min-h-screen bg-blue-50">
+      <div className="flex-1 hidden">
+        <img src="/login.png" alt="" />
+      </div>
+      <div className="flex-1  flex items-center justify-center p-6">
+        <form
+          onSubmit={handleSubmit}
+          className="w-full max-w-sm p-8 rounded-2xl shadow-xl"
+        >
+          <h2 className="text-3xl font-bold text-blue-600 mb-6">Login</h2>
 
-        <input
-          type="email"
-          placeholder="Email"
-          className="border border-blue-300 focus:border-blue-500 focus:ring focus:ring-blue-200 p-2 mb-4 w-72 rounded"
-          onChange={(e) => setData({ ...data, email: e.target.value })}
-        />
+          <input
+            type="email"
+            placeholder="Email"
+            className="border border-blue-300 focus:border-blue-500 focus:ring focus:ring-blue-200 p-2 mb-4 w-72 rounded"
+            onChange={(e) => setData({ ...data, email: e.target.value })}
+          />
 
-        <input
-          type="password"
-          placeholder="Password"
-          className="border border-blue-300 focus:border-blue-500 focus:ring focus:ring-blue-200 p-2 mb-4 w-72 rounded"
-          onChange={(e) => setData({ ...data, password: e.target.value })}
-        />
+          <input
+            type="password"
+            placeholder="Password"
+            className="border border-blue-300 focus:border-blue-500 focus:ring focus:ring-blue-200 p-2 mb-4 w-72 rounded"
+            onChange={(e) => setData({ ...data, password: e.target.value })}
+          />
 
-        <button className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition-colors">
-          Login
-        </button>
-        <p className="text-sm text-gray-600">
-          Don’t have an account?{" "}
-          <Link to="/register" className="text-blue-600 hover:underline">
-            Register
-          </Link>
-        </p>
-      </form>
+          <button className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition-colors">
+            Login
+          </button>
+          <p className="text-sm text-gray-600">
+            Don’t have an account?{" "}
+            <Link to="/register" className="text-blue-600 hover:underline">
+              Register
+            </Link>
+          </p>
+        </form>
+      </div>
     </div>
   )
 }
