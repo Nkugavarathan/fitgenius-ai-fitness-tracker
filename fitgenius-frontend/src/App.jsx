@@ -11,6 +11,10 @@ import About from "./pages/About"
 import { Toaster } from "react-hot-toast"
 import Footer from "./components/Footer"
 import Chatbot from "./pages/Chatbot"
+import Goal from "./pages/Goal"
+import WeightLog from "./pages/WeightLog"
+import Dash from "./pages/Dash"
+import Calories from "./pages/Calories"
 export default function App() {
   return (
     <>
@@ -24,7 +28,10 @@ export default function App() {
         <Route path="/workouts" element={<WorkoutTable />} />
         <Route path="/about" element={<About />} />
         <Route path="/chatbot" element={<Chatbot />} />
-
+        <Route path="/goals" element={<Goal />} />
+        <Route path="/weightlog" element={<WeightLog />} />
+        <Route path="/dash" element={<Dash />} />
+        <Route path="/calories" element={<Calories />} />
         {/* <Route path="/dashboard" element={<Dashboard />} /> */}
         <Route
           path="/dashboard"

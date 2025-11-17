@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import api, { getTodayDate } from "../api/axiosInstance"
 
-const Goals = () => {
+const Goal = () => {
   const [goals, setGoals] = useState([])
   const [title, setTitle] = useState("")
   const [targetDate, setTargetDate] = useState(getTodayDate())
@@ -180,4 +180,4 @@ const Goals = () => {
   )
 }
 
-export default Goals
+export default Goal
