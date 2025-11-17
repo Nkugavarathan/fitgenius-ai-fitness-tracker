@@ -52,7 +52,7 @@ const WeightLog = () => {
   if (loading) return <p>Loading weight history...</p>
 
   return (
-    <div className=" bg-gradient-to-br from-blue-50 to-blue-100 ">
+    <div className=" bg-gradient-to-br from-blue-50 to-blue-100 p-20">
       <h1 className="text-3xl font-bold mb-6 text-gray-800 text-center">
         ⚖️ Weight Log
       </h1>

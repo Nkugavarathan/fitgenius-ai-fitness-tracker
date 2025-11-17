@@ -62,7 +62,7 @@ const Goal = () => {
   if (loading) return <p>Loading goals...</p>
 
   return (
-    <div className="bg-gradient-to-br from-blue-50 to-blue-100">
+    <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-20">
       <h1 className=" text-center  text-3xl font-bold mb-6 text-gray-800">
         🎯 Fitness Goals
       </h1>

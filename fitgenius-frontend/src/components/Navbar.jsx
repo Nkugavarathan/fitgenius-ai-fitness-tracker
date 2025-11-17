@@ -29,7 +29,7 @@ export default function Navbar() {
 
             {/* Dropdown content */}
             {open && (
-              <div className="z-20 absolute mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+              <div className="z-20 absolute mt-2 w-40 rounded-md shadow-lg bg-gradient-to-br from-blue-50 to-blue-100  ring-1 ring-black ring-opacity-5">
                 <div className="py-1">
                   <Link
                     to="/workouts"

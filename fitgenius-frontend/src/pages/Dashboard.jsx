@@ -84,11 +84,10 @@ const StatCard = ({ title, value, subtext, color, link }) => {
 
 // --- Main Dashboard Component ---
 
-const DashboardPage = () => {
-  // 1. STATE INITIALIZATION (All hooks MUST be at the top)
+const Dashboard = () => {
   const [summary, setSummary] = useState(null)
   const [loading, setLoading] = useState(true)
-  const [workoutChartData, setWorkoutChartData] = useState([]) // State for workout volume chart
+  const [workoutChartData, setWorkoutChartData] = useState([])
 
   // 2. DATA FETCHING EFFECTS
 
@@ -159,7 +158,7 @@ const DashboardPage = () => {
 
   return (
     <div className="space-y-8 bg-gradient-to-br from-blue-50 to-blue-100 p-15">
-      <h1 className="text-3xl font-bold mb-6 text-gray-800">
+      <h1 className="text-3xl font-bold mb-6 text-gray-800 text-center">
         🏠 Dashboard Overview
       </h1>
 
@@ -280,4 +279,4 @@ const DashboardPage = () => {
   )
 }
 
-export default DashboardPage
+export default Dashboard
