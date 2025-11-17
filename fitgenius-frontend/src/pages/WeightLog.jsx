@@ -52,8 +52,10 @@ const WeightLog = () => {
   if (loading) return <p>Loading weight history...</p>
 
   return (
-    <div>
-      <h1 className="text-3xl font-bold mb-6 text-gray-800">⚖️ Weight Log</h1>
+    <div className=" bg-gradient-to-br from-blue-50 to-blue-100 ">
+      <h1 className="text-3xl font-bold mb-6 text-gray-800 text-center">
+        ⚖️ Weight Log
+      </h1>
 
       {/* Weight Entry Form */}
       <div className="bg-white p-6 shadow-lg rounded-lg mb-8">
@@ -81,7 +83,7 @@ const WeightLog = () => {
           <div className="md:col-span-2">
             <button
               type="submit"
-              className="w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 transition"
+              className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition"
             >
               Save Entry
             </button>
@@ -90,8 +92,10 @@ const WeightLog = () => {
       </div>
 
       {/* Weight History Table */}
-      <h2 className="text-2xl font-semibold mb-4 text-gray-800">History</h2>
-      <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+      <h2 className="text-2xl font-semibold mb-4 text-gray-800 text-center">
+        History
+      </h2>
+      <div className="bg-white shadow-lg rounded-lg overflow-hidden ">
         <table className="min-w-full divide-y divide-gray-200">
           <thead className="bg-gray-50">
             <tr>

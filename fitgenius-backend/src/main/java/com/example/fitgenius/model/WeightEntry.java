@@ -2,24 +2,27 @@ package com.example.fitgenius.model;
 
 import jakarta.persistence.*;
 import lombok.*;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.time.LocalDate;
 
 @Entity
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Calorie {
-
+@Table(name = "weight_entries")
+@JsonIgnoreProperties({"user"})
+public class WeightEntry {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Integer calories;  // user enters calories eaten
-
-    private LocalDate date;  // which day
+    private Double weight;
+    private LocalDate date;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
+    @JsonIgnoreProperties({"password"})
     private User user;
 }

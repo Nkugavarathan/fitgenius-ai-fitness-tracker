@@ -62,8 +62,8 @@ const Goal = () => {
   if (loading) return <p>Loading goals...</p>
 
   return (
-    <div>
-      <h1 className="text-3xl font-bold mb-6 text-gray-800">
+    <div className="bg-gradient-to-br from-blue-50 to-blue-100">
+      <h1 className=" text-center  text-3xl font-bold mb-6 text-gray-800">
         🎯 Fitness Goals
       </h1>
 

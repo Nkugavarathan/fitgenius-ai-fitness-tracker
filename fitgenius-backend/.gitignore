@@ -33,6 +33,7 @@ build/
 .vscode/
 
 
-*/application.properties
-.env
-*.env
+src/main/resources/application.properties
+
+
+src/main/resources/.env
