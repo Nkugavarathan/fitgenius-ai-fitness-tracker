@@ -11,12 +11,17 @@ import About from "./pages/About"
 import { Toaster } from "react-hot-toast"
 import Footer from "./components/Footer"
 import Chatbot from "./pages/Chatbot"
+import Goal from "./pages/Goal"
+import WeightLog from "./pages/WeightLog"
+
+import Calories from "./pages/Calories"
+import PageNotFound from "./pages/PageNotFound"
 export default function App() {
   return (
     <>
+      {/* enable toaster can access all place  */}
       <Toaster />
       <Navbar />
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -24,8 +29,10 @@ export default function App() {
         <Route path="/workouts" element={<WorkoutTable />} />
         <Route path="/about" element={<About />} />
         <Route path="/chatbot" element={<Chatbot />} />
-
-        {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+        <Route path="/goals" element={<Goal />} />
+        <Route path="/weightlog" element={<WeightLog />} />
+        <Route path="/calories" element={<Calories />} />
+        <Route path="*" element={<PageNotFound />} />
         <Route
           path="/dashboard"
           element={
