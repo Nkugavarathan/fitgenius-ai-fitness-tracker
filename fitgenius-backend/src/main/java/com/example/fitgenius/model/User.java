@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "users") // table name users
+@Table(name = "users")
 @Data                        //  combines @Getter, @Setter, @ToString, @EqualsAndHashCode
 @NoArgsConstructor           //  required by JPA
 @AllArgsConstructor
